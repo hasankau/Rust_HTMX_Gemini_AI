@@ -1,0 +1,20 @@
+[package]
+name = "rocket_rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+askama = "0.12.1"
+axum = "0.7.4"
+axum-macros = "0.4.1"
+htmx = "0.1.0"
+lazy_static = "1.4.0"
+serde = { version = "1.0.195", features = ["derive"] }
+serde_derive = "1.0.195"
+tokio = { version = "1", features = ["full"] }
+tower = "0.4.13"
+google-generative-ai-rs = "0.1.7"
+log = "0.4"
+env_logger = "0.11.0"

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Example</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- <h1 id="greeting" hx-get="/greet">Loading...</h1> -->
+    <!-- <button className="middle none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    data-ripple-light="true" hx-target="#greeting" hx-get="/greet">Get</button> -->
+    <!-- <h1 id="greeting"></h1>
+
+    <form hx-post="/todo" hx-target="#add_todo_list">
+        <input type="text" name="new_to_do" placeholder="To do" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="add_todo_list">
+
+    </div> -->
+    <h4>Enter your prompt</h4>
+    <form hx-post="/gemini" hx-target="#chat">
+        <input type="text" name="new_to_do" placeholder="prompt" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="chat">
+
+    </div>
+</body>
+
+</html>
