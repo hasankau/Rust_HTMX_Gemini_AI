@@ -76,7 +76,7 @@ async fn response_gemini(
 
 async fn request_gemini(input: String) -> Result<String, Box<dyn std::error::Error>> {
     // Either run as a standard text request or a stream generate content request
-    let client = Client::new("AIzaSyClKQMCLnQ8PXVY01uyjFdW8PZVPcTDRkk".to_string());
+    let client = Client::new("API_KEY".to_string());
 
     let txt_request = Request {
         contents: vec![Content {
