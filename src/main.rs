@@ -103,12 +103,12 @@ async fn request_gemini(input: String) -> Result<String, Box<dyn std::error::Err
             .and_then(|candidate| candidate.content.parts.get(0))
             .and_then(|part| part.text.clone())
             .unwrap_or_default(),
-        PostResult::Streamed(_) => String::new(), // Handle differently if needed
+        PostResult::Streamed(_) => String::new(),
     };
 
     let mut formatted_text = "<div class='msg-wrapper d-flex flex-row justify-content-start latest'><div class='bot-msg'>".to_string();
 
-    formatted_text.push_str(&text.replace("\n", "<br>")); // Assuming input.input is a String
+    formatted_text.push_str(&text.replace("\n", "<br>")); 
     formatted_text.push_str("</div></div>");
     Ok(formatted_text)
 }
